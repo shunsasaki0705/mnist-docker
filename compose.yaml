@@ -6,3 +6,6 @@ services:
     container_name: mnist-container
     volumes:
       - .:/app
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
